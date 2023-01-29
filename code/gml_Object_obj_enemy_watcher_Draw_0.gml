@@ -1,0 +1,5 @@
+draw_sprite_ext(s_shadow, 1, x, (y + 12), 1, 1, 0, c_black, 0.5)
+if (shader_hit == 1)
+    shader_set(shd_flash_hit)
+draw_self()
+shader_reset()

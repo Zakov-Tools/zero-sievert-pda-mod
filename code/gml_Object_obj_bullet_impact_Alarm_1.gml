@@ -1,0 +1,3 @@
+instance_destroy()
+audio_emitter_free(my_emitter)
+audio_emitter_free(my_emitter_ricochet)

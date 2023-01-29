@@ -1,0 +1,9 @@
+alarm[0] = 300
+image_speed = 0
+spd = 0
+dir = 0
+min_dir = 0
+max_dir = 0
+acc = 0.2
+hspd = 0
+vspd = 0

@@ -1,0 +1,1 @@
+disattiva = 1

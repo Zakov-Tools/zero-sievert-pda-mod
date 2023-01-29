@@ -1,0 +1,22 @@
+follow_id = -4
+outline_init()
+off_amount = 0
+off_dir = 0
+off_k = 0.2
+off_angle_switching = 0
+my_id = -1
+off_angle = 0
+surface_item = surface_create(96, 32)
+can_draw = 0
+wl_timer = 0
+wl_timer_max1 = 50
+wl_timer_max2 = 15
+wl_timer_max3 = 55
+wl_angle = 0
+wl_angle_max = 20
+wl_off_x = 0
+wl_off_x_max = 4
+wl_off_y = 0
+wl_off_y_max = 3
+pl_weap_state = (0 << 0)
+alarm[0] = 1

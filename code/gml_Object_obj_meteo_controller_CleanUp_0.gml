@@ -1,0 +1,5 @@
+ds_list_destroy(meteo_rain_list[(1 << 0)])
+ds_list_destroy(meteo_rain_list[(2 << 0)])
+ds_list_destroy(meteo_rain_list[(3 << 0)])
+ds_list_destroy(meteo_rain_list[(4 << 0)])
+ds_list_destroy(meteo_rain_list[(7 << 0)])

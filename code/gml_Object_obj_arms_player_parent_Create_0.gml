@@ -1,0 +1,13 @@
+im_speed = 0.5
+image_speed = im_speed
+obj_player.draw_weapon = 0
+alarm[0] = 1
+alarm[1] = 3
+counter = 0
+counter_max = 1
+item_id = (0 << 0)
+player_bleed = 0
+r_energy = 0
+r_thirst = 0
+r_fatigue = 0
+r_radiation = 0

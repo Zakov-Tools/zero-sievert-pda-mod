@@ -1,0 +1,3 @@
+audio_emitter_free(emitter_shoot)
+audio_emitter_free(emitter_walk)
+audio_emitter_free(emitter_talk)

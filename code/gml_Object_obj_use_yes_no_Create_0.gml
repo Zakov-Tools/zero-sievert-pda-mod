@@ -1,0 +1,20 @@
+image_index = 0
+image_speed = 0
+quale_item = -1
+item_id_consumable = -4
+lista_item()
+s_width = sprite_get_width(sprite_index)
+s_height = sprite_get_height(sprite_index)
+x = (mouse_x - (s_width / 2))
+y = mouse_y
+var camx = camera_get_view_x(view_camera[0])
+var camy = camera_get_view_y(view_camera[0])
+x = clamp(x, camx, ((camx + 480) - s_width))
+y = clamp(y, camy, ((camy + 270) - s_height))
+mouse_offset = 3
+yes_x = (29 + mouse_offset)
+yes_y = (3 + mouse_offset)
+no_x = (42 + mouse_offset)
+no_y = (3 + mouse_offset)
+box_width = 11
+position_now = (0 << 0)

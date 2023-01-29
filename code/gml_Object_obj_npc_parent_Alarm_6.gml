@@ -1,0 +1,9 @@
+target = 90
+target_relation = (2 << 0)
+search_target_id = 90
+state = (23 << 0)
+enemy_seen = 1
+last_seen_x = obj_player.x
+last_seen_y = obj_player.y
+move_point_x = obj_player.x
+move_point_y = obj_player.y

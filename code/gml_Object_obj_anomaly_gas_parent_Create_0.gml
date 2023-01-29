@@ -1,0 +1,9 @@
+depth = ((-y) - 38)
+alarm[0] = 1
+ano_id = 0
+raggio = 0
+raggio_anomaly_fire = 0
+amount = 0
+crystal = -4
+crystal_amount = 0
+chance_spawn_scientist = 0

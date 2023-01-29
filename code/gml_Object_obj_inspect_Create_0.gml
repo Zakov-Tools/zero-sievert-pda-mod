@@ -1,0 +1,21 @@
+lista_item()
+var a = (0 << 0)
+action_name[a] = "Use"
+a = (2 << 0)
+action_name[a] = "Scrap"
+a = (1 << 0)
+action_name[a] = "Unload"
+list_menu = ds_list_create()
+list_name = ds_list_create()
+prompt = 0
+prompt_action = 0
+scrap_subito = 0
+start = 0
+alarm[0] = 1
+quale_item = -1
+pos = -1
+object_id = -1
+sw = sprite_get_width(s_hud_use)
+sh = sprite_get_height(s_hud_use)
+hover = -1
+scrap_item_now = 0

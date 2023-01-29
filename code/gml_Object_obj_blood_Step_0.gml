@@ -1,0 +1,10 @@
+image_speed = 0
+spd -= acc
+if (spd <= 0)
+    spd = 0
+var _dir = irandom_range(min_dir, max_dir)
+hspd = lengthdir_x(spd, _dir)
+vspd = lengthdir_y(spd, _dir)
+x += hspd
+y += vspd
+depth = ((-y) + 16)

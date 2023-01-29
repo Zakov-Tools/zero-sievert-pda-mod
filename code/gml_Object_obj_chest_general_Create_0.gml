@@ -1,0 +1,36 @@
+image_index = 0
+image_speed = 0
+depth = ((-y) + 1)
+lista_item()
+lista_chest()
+quanti_item_effettivi = 0
+tipo = (1 << 0)
+crea_loot_comunque = 0
+already_looted = 0
+chest_faction = 0
+id_of_the_killer = -4
+create_item_in_chest = 1
+arma_drop = 0
+ammo_drop = 0
+crow_spawned = 0
+crow_amount = (irandom(2) + 1)
+crow_timer = current_time
+crow_timer_max = (current_time + (irandom(60) * 1000))
+timer_visible = 0
+timer_visible_max = 30
+alpha_ = 1
+a_gain = 0.1
+name_chest = ""
+alarm[0] = 2
+alarm[1] = 3
+mod_id[(0 << 0)] = -1
+mod_id[(1 << 0)] = -1
+mod_id[(3 << 0)] = -1
+mod_id[(2 << 0)] = -1
+mod_id[(5 << 0)] = -1
+mod_id[(6 << 0)] = -1
+mod_id[(4 << 0)] = -1
+mod_id[(7 << 0)] = -1
+mod_id[(8 << 0)] = -1
+mod_id[(9 << 0)] = -1
+mod_id[(10 << 0)] = -1

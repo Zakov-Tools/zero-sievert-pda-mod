@@ -1,0 +1,9 @@
+stop_y = 0
+speed = (2 + random_range(-0.5, 0.5))
+grav = 0.25
+alarm[0] = 600
+image_speed = 0
+rimbalzo = 0
+rimbalzo_max = 1
+audio_done = 0
+audio_can = 0

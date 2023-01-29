@@ -1,0 +1,11 @@
+damage = 0
+hspd = 0
+vspd = 0
+timer = 0
+target = 0
+shooter_faction = 0
+shooter_id = -4
+shooter_npc_name = ""
+penetration = 0
+n_bullet = 1
+audio_near_created = 0

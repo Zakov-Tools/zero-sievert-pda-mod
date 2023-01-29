@@ -1,0 +1,43 @@
+function scr_b_swamp_church_1(argument0, argument1) //gml_Script_scr_b_swamp_church_1
+{
+    var xx = argument0
+    var yy = argument1
+    scr_place_obj_map(18, ((xx * 16) + 40), ((yy * 16) + 176))
+    scr_place_obj_map(13, ((xx * 16) + 224), ((yy * 16) + 288))
+    scr_place_obj_map(13, ((xx * 16) + 240), ((yy * 16) + 240))
+    scr_place_obj_map(15, ((xx * 16) + 160), ((yy * 16) + 288))
+    scr_place_obj_map(15, ((xx * 16) + 96), ((yy * 16) + 288))
+    scr_place_obj_map(38, ((xx * 16) + 256), ((yy * 16) + 208))
+    scr_place_obj_map(38, ((xx * 16) + 32), ((yy * 16) + 288))
+    scr_place_obj_map(3, ((xx * 16) + 177), ((yy * 16) + 142))
+    scr_place_obj_map(3, ((xx * 16) + 155), ((yy * 16) + 48))
+    scr_place_obj_map(3, ((xx * 16) + 224), ((yy * 16) + 53))
+    scr_place_obj_map(2, ((xx * 16) + 191), ((yy * 16) + 56))
+    scr_place_obj_map(2, ((xx * 16) + 208), ((yy * 16) + 64))
+    scr_place_obj_map(2, ((xx * 16) + 176), ((yy * 16) + 112))
+    scr_place_obj_map(92, ((xx * 16) + 224), ((yy * 16) + 144))
+    scr_place_obj_map(92, ((xx * 16) + 208), ((yy * 16) + 144))
+    scr_place_obj_map(92, ((xx * 16) + 192), ((yy * 16) + 144))
+    scr_place_obj_map(92, ((xx * 16) + 208), ((yy * 16) + 128))
+    scr_place_obj_map(92, ((xx * 16) + 224), ((yy * 16) + 128))
+    scr_place_obj_map(92, ((xx * 16) + 192), ((yy * 16) + 128))
+    scr_place_obj_map(92, ((xx * 16) + 192), ((yy * 16) + 128))
+    scr_place_obj_map(92, ((xx * 16) + 224), ((yy * 16) + 112))
+    scr_place_obj_map(92, ((xx * 16) + 208), ((yy * 16) + 112))
+    scr_place_obj_map(92, ((xx * 16) + 192), ((yy * 16) + 112))
+    scr_place_obj_map(92, ((xx * 16) + 224), ((yy * 16) + 96))
+    scr_place_obj_map(92, ((xx * 16) + 208), ((yy * 16) + 96))
+    scr_place_obj_map(92, ((xx * 16) + 192), ((yy * 16) + 96))
+    scr_place_obj_map(92, ((xx * 16) + 224), ((yy * 16) + 80))
+    scr_place_obj_map(92, ((xx * 16) + 208), ((yy * 16) + 80))
+    scr_place_obj_map(92, ((xx * 16) + 192), ((yy * 16) + 80))
+    scr_place_obj_map(91, ((xx * 16) + 4), ((yy * 16) + 160))
+    scr_place_obj_map(90, ((xx * 16) + 48), ((yy * 16) + 176))
+    instance_create_depth(((xx * 16) + 208), ((yy * 16) + 224), 0, obj_enemy_human_bandit_regular)
+    instance_create_depth(((xx * 16) + 192), ((yy * 16) + 176), 0, obj_enemy_human_bandit_regular)
+    instance_create_depth(((xx * 16) + 128), ((yy * 16) + 240), 0, obj_enemy_human_bandit_novice)
+    instance_create_depth(((xx * 16) + 144), ((yy * 16) + 176), 0, obj_chest_medication_box)
+    instance_create_depth(((xx * 16) + 248), ((yy * 16) + 207), 0, obj_weapon_box_common)
+    return;
+}
+
