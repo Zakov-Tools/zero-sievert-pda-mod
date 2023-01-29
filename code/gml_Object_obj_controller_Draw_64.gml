@@ -270,6 +270,17 @@ if instance_exists(obj_player)
         draw_text(105, 48, "Inventory")
         draw_set_color(c_white)
         draw_text(105, 47, "Inventory")
+
+        var _c_dark = merge_color(c_white, c_black, 0.9)
+        draw_rectangle_color(204, 241, 276, 249, c_white, c_white, c_white, c_white, 0)
+        draw_rectangle_color(204, 249, 276, 257, c_white, c_white, c_white, c_white, 0)
+        draw_rectangle_color(205, 242, 275, 248, _c_dark, _c_dark, _c_dark, _c_dark, 0)
+        draw_rectangle_color(205, 250, 275, 256, _c_dark, _c_dark, _c_dark, _c_dark, 0)
+        draw_set_color(c_white)
+        draw_text(240, 240, "Price / kg")
+        draw_set_color(c_white)
+        draw_text(240, 248, "Max Price / slot")
+
         var _name = loot_name
         if (obj_player.trading == 1)
             loot_name = global.page_trader_text[global.page_trader]

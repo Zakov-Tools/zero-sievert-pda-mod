@@ -28,3 +28,12 @@ global.show_overlay_soldi_x = ((global.show_overlay_peso_x + global.show_overlay
 global.show_overlay_soldi_y = global.show_overlay_peso_y
 global.show_overlay_soldi_w = 50
 global.show_overlay_soldi_h = global.show_overlay_peso_h
+
+global.show_overlay_price_kg_x = 200
+global.show_overlay_price_kg_y = 240
+global.show_overlay_price_kg_w = 100
+global.show_overlay_price_kg_h = 10
+global.show_overlay_price_slot_x = global.show_overlay_price_kg_x
+global.show_overlay_price_slot_y = (global.show_overlay_price_kg_y + global.show_overlay_price_kg_h)
+global.show_overlay_price_slot_w = global.show_overlay_price_kg_w
+global.show_overlay_price_slot_h = global.show_overlay_price_kg_h
