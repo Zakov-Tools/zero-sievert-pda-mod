@@ -15,11 +15,13 @@ The PDA will be able to analyze all the items and display overlays in the invent
 
 ## Installation
 
-1. Check the version of your game (it appears in the lower left corner of the game menu).
-2. Download the `data.win` file for your version in the `Releases` tab.
+Last version: v0.28.3
+
+1. Check that the version of your game matches the last version of the mod.
+2. Download the `data.win` [here](https://github.com/Zakov-Tools/zero-sievert-pda-mod/raw/main/bin/data.7z).
 3. Go to the installation folder of your game (the folder where you can find `ZERO Sievert.exe`).
 4. Make a backup of the original `data.win` in case you want to play again without the mod.
-5. Replace the `data.win` file with the file you just downloaded.
+5. Extract and replace the `data.win` file with the file you just downloaded.
 6. Run the game.
 
 ## Future ideas
