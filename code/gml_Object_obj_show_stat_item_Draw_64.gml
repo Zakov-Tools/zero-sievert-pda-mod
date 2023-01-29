@@ -201,20 +201,31 @@ if (go == 1)
         {
             if (obj_player.trading == 0)
             {
-                if (room == r_hub)
-                {
-                    var soldi_ = item_value[item_id]
-                    var soldi_2 = 0
-                    if (item_categoria[item_id] == (0 << 0))
-                        soldi_2 = scr_get_money_weapon(id_instance)
-                    var soldi_tot = (((((soldi_ * id_instance.durability) / 100) + soldi_2) * 0.2) * global.sk_k[(21 << 0)])
-                    soldi_tot = round(soldi_tot)
-                    _t_stack = ""
-                    if (_qnt > 1)
-                        _t_stack = (" / " + string((soldi_tot * id_instance.qnt)))
-                    _t = (("Sell for: " + string(soldi_tot)) + _t_stack)
-                    draw_text((left_x + 2), (top_y + 24), _t)
-                }
+
+                var soldi_ = item_value[item_id]
+                var soldi_2 = 0
+                if (item_categoria[item_id] == (0 << 0))
+                    soldi_2 = scr_get_money_weapon(id_instance)
+                var soldi_tot = (((((soldi_ * id_instance.durability) / 100) + soldi_2) * 0.2) * global.sk_k[(21 << 0)])
+                soldi_tot = round(soldi_tot)
+                _t_stack = ""
+                if (_qnt > 1)
+                    _t_stack = (" / " + string((soldi_tot * id_instance.qnt)))
+                _t = (("Sell for: " + string(soldi_tot)) + _t_stack)
+                draw_text((left_x + 2), (top_y + 24), _t)
+                var price_per_kg = (soldi_tot / item_weight[item_id])
+                _t = ("per kg: " + string(price_per_kg))
+                draw_text((left_x + 4), (top_y + 34), _t)
+                var _w = (sprite_get_width(item_sprite_inv[item_id]) div 16)
+                var _h = (sprite_get_height(item_sprite_inv[item_id]) div 16)
+                var slots = (_w * _h)
+                var price_per_slot = ((soldi_tot * id_instance.qnt) / slots)
+                var _t_max_per_slot = ""
+                if (item_stack_max[item_id] > 1)
+                    _t_max_per_slot = ((" (max: " + string(((soldi_tot * item_stack_max[item_id]) / slots))) + ")")
+                _t = (("per slot: " + string(price_per_slot)) + _t_max_per_slot)
+                draw_text((left_x + 4), (top_y + 44), _t)
+
             }
             else if (id_instance.position == (3 << 0))
             {
@@ -244,7 +255,7 @@ if (go == 1)
                 draw_text((left_x + 2), (top_y + 24), _t)
             }
         }
-        draw_text_ext((left_x + 2), (top_y + 36), item_description[item_id], 8, ((bb_w / 2) - 6))
+        draw_text_ext((left_x + 2), (top_y + 56), item_description[item_id], 8, ((bb_w / 2) - 6))
         var offset_amount = 12
         var stat_startx = (left_x + (bb_w / 2))
         var stat_starty = (top_y + 22)
