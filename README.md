@@ -5,13 +5,17 @@
 The player will now have a PDA that will allow him to consult advanced information about the items he collects during a hunt.
 
 The PDA will display information such as:
-- Selling price of each item (and of the stack).
+- Selling price of each item (and of the stack)
 - Selling price per kg
 - Selling price per slot (and of the maximum stack)
 
+![items advanced information](img/items_advanced_information.png)
+
 The PDA will be able to analyze all the items and display overlays in the inventory:
-- Selling price per slot of each item
+- Selling max price per slot of each item
+  ![overlay price per slot](img/overlay_max_price_per_slot.png)
 - Selling price per kg of each item
+  ![overlay price per kg](img/overlay_price_per_kg.png)
 
 ## Installation
 
