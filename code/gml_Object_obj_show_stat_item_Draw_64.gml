@@ -52,55 +52,145 @@ if (room != r_menu)
                     }
                 }
             }
-            if (room == r_hub)
+            if scr_mouse_inside((camx + global.show_overlay_soldi_x), (camy + global.show_overlay_soldi_y), global.show_overlay_soldi_w, global.show_overlay_soldi_h)
             {
-                if scr_mouse_inside((camx + global.show_overlay_soldi_x), (camy + global.show_overlay_soldi_y), global.show_overlay_soldi_w, global.show_overlay_soldi_h)
+                if instance_exists(obj_item)
                 {
-                    if instance_exists(obj_item)
+                    _list_id = ds_list_create()
+                    _list_x = ds_list_create()
+                    _list_y = ds_list_create()
+                    var _list_soldi = ds_list_create()
+                    _list_xx = ds_list_create()
+                    _list_yy = ds_list_create()
+                    with (obj_item)
                     {
-                        _list_id = ds_list_create()
-                        _list_x = ds_list_create()
-                        _list_y = ds_list_create()
-                        var _list_soldi = ds_list_create()
-                        _list_xx = ds_list_create()
-                        _list_yy = ds_list_create()
-                        with (obj_item)
-                        {
-                            ds_list_add(_list_id, my_id)
-                            ds_list_add(_list_x, x)
-                            ds_list_add(_list_y, y)
-                            _stack = qnt
-                            ds_list_add(_list_soldi, (item_value[my_id] * _stack))
-                            ds_list_add(_list_xx, caselle_x)
-                            ds_list_add(_list_yy, caselle_y)
-                        }
-                        for (i = 0; i < ds_list_size(_list_id); i++)
-                        {
-                            var _soldi = ds_list_find_value(_list_soldi, i)
-                            _soldi = clamp(_soldi, global.show_overlay_soldi_min, global.show_overlay_soldi_max)
-                            _div = (_soldi / global.show_overlay_soldi_max)
-                            _step = ((global.show_overlay_soldi_max - global.show_overlay_soldi_min) / global.show_overlay_col_number)
-                            _a = global.show_overlay_soldi_min
-                            _col = c_white
-                            if (_soldi >= 0)
-                                _col = merge_color(global.show_overlay_col[4], global.show_overlay_col[3], (_soldi / (_a + _step)))
-                            if (_soldi >= (_a + _step))
-                                _col = merge_color(global.show_overlay_col[3], global.show_overlay_col[2], ((_soldi - _step) / (_a + (_step * 2))))
-                            if (_soldi >= (_a + (_step * 2)))
-                                _col = merge_color(global.show_overlay_col[2], global.show_overlay_col[1], ((_soldi - (_step * 2)) / (_a + (_step * 3))))
-                            if (_soldi >= (_a + (_step * 3)))
-                                _col = merge_color(global.show_overlay_col[1], global.show_overlay_col[0], ((_soldi - (_step * 3)) / (_a + (_step * 4))))
-                            if (_soldi >= (_a + (_step * 4)))
-                                _col = global.show_overlay_col[0]
-                            _xx = ds_list_find_value(_list_xx, i)
-                            _yy = ds_list_find_value(_list_yy, i)
-                            _x = ds_list_find_value(_list_x, i)
-                            _y = ds_list_find_value(_list_y, i)
-                            draw_sprite_ext(s_16x16, 0, (_x - camx), (_y - camy), _xx, _yy, 0, _col, 0.5)
-                        }
+                        ds_list_add(_list_id, my_id)
+                        ds_list_add(_list_x, x)
+                        ds_list_add(_list_y, y)
+                        _stack = qnt
+                        ds_list_add(_list_soldi, (item_value[my_id] * _stack))
+                        ds_list_add(_list_xx, caselle_x)
+                        ds_list_add(_list_yy, caselle_y)
+                    }
+                    for (i = 0; i < ds_list_size(_list_id); i++)
+                    {
+                        var _soldi = ds_list_find_value(_list_soldi, i)
+                        _soldi = clamp(_soldi, global.show_overlay_soldi_min, global.show_overlay_soldi_max)
+                        _div = (_soldi / global.show_overlay_soldi_max)
+                        _step = ((global.show_overlay_soldi_max - global.show_overlay_soldi_min) / global.show_overlay_col_number)
+                        _a = global.show_overlay_soldi_min
+                        _col = c_white
+                        if (_soldi >= 0)
+                            _col = merge_color(global.show_overlay_col[4], global.show_overlay_col[3], (_soldi / (_a + _step)))
+                        if (_soldi >= (_a + _step))
+                            _col = merge_color(global.show_overlay_col[3], global.show_overlay_col[2], ((_soldi - _step) / (_a + (_step * 2))))
+                        if (_soldi >= (_a + (_step * 2)))
+                            _col = merge_color(global.show_overlay_col[2], global.show_overlay_col[1], ((_soldi - (_step * 2)) / (_a + (_step * 3))))
+                        if (_soldi >= (_a + (_step * 3)))
+                            _col = merge_color(global.show_overlay_col[1], global.show_overlay_col[0], ((_soldi - (_step * 3)) / (_a + (_step * 4))))
+                        if (_soldi >= (_a + (_step * 4)))
+                            _col = global.show_overlay_col[0]
+                        _xx = ds_list_find_value(_list_xx, i)
+                        _yy = ds_list_find_value(_list_yy, i)
+                        _x = ds_list_find_value(_list_x, i)
+                        _y = ds_list_find_value(_list_y, i)
+                        draw_sprite_ext(s_16x16, 0, (_x - camx), (_y - camy), _xx, _yy, 0, _col, 0.5)
                     }
                 }
             }
+            if scr_mouse_inside((camx + global.show_overlay_price_kg_x), (camy + global.show_overlay_price_kg_y), global.show_overlay_price_kg_w, global.show_overlay_price_kg_h)
+            {
+                if instance_exists(obj_item)
+                {
+                    _list_id = ds_list_create()
+                    _list_x = ds_list_create()
+                    _list_y = ds_list_create()
+                    _list_soldi = ds_list_create()
+                    _list_peso = ds_list_create()
+                    _list_xx = ds_list_create()
+                    _list_yy = ds_list_create()
+                    with (obj_item)
+                    {
+                        ds_list_add(_list_id, my_id)
+                        ds_list_add(_list_x, x)
+                        ds_list_add(_list_y, y)
+                        _stack = qnt
+                        ds_list_add(_list_soldi, (item_value[my_id] * _stack))
+                        ds_list_add(_list_peso, (item_weight[my_id] * _stack))
+                        ds_list_add(_list_xx, caselle_x)
+                        ds_list_add(_list_yy, caselle_y)
+                    }
+                    for (i = 0; i < ds_list_size(_list_id); i++)
+                    {
+                        var _price = ds_list_find_value(_list_soldi, i)
+                        var _weight = ds_list_find_value(_list_peso, i)
+                        var _price_kg = ((_price / 5) / _weight)
+                        _col = c_white
+                        // [200.0, 400.0, 650.0, 1000.0, 1800.0, 3266.0, 6646.4, 10020.1, 18000.0]
+                        if (_price_kg >= 0) _col = c_red
+                        if (_price_kg >= 400) _col = merge_colour(c_red, c_lime, 0.25)
+                        if (_price_kg >= 1000) _col = merge_colour(c_red, c_lime, 0.5)
+                        if (_price_kg >= 3200) _col = merge_colour(c_red, c_lime, 0.75)
+                        if (_price_kg >= 8000) _col = c_lime
+                        if (_price_kg >= 13000) _col = c_aqua
+                        if (_price_kg >= 24000) _col = c_fuchsia
+                        _xx = ds_list_find_value(_list_xx, i)
+                        _yy = ds_list_find_value(_list_yy, i)
+                        _x = ds_list_find_value(_list_x, i)
+                        _y = ds_list_find_value(_list_y, i)
+                        draw_sprite_ext(s_16x16, 0, (_x - camx), (_y - camy), _xx, _yy, 0, _col, 0.5)
+                    }
+                }
+            }
+            if scr_mouse_inside((camx + global.show_overlay_price_slot_x), (camy + global.show_overlay_price_slot_y), global.show_overlay_price_slot_w, global.show_overlay_price_slot_h)
+            {
+                if instance_exists(obj_item)
+                {
+                    _list_id = ds_list_create()
+                    _list_x = ds_list_create()
+                    _list_y = ds_list_create()
+                    _list_soldi = ds_list_create()
+                    var _list_slots = ds_list_create()
+                    _list_xx = ds_list_create()
+                    _list_yy = ds_list_create()
+                    with (obj_item)
+                    {
+                        ds_list_add(_list_id, my_id)
+                        ds_list_add(_list_x, x)
+                        ds_list_add(_list_y, y)
+                        _stack = qnt
+                        ds_list_add(_list_soldi, (item_value[my_id] * item_stack_max[my_id]))
+                        ds_list_add(_list_slots, ((sprite_get_width(item_sprite_inv[my_id]) div 16) * (sprite_get_height(item_sprite_inv[my_id]) div 16)))
+                        ds_list_add(_list_xx, caselle_x)
+                        ds_list_add(_list_yy, caselle_y)
+                    }
+                    for (i = 0; i < ds_list_size(_list_id); i++)
+                    {
+                        _price = ds_list_find_value(_list_soldi, i)
+                        var _slots = ds_list_find_value(_list_slots, i)
+                        var _max_price_slot = ((_price / 5) / _slots)
+                        _col = c_white
+                        // [12.5,  50.0,  100.2, 246.8,  700.0,  1000.0, 1511.9, 2040.2,  4979.6]
+                        if (_max_price_slot >= 0) _col = c_red
+                        if (_max_price_slot >= 50) _col = merge_colour(c_red, c_lime, 0.25)
+                        if (_max_price_slot >= 220) _col = merge_colour(c_red, c_lime, 0.5)
+                        if (_max_price_slot >= 600) _col = merge_colour(c_red, c_lime, 0.75)
+                        if (_max_price_slot >= 1000) _col = c_lime
+                        if (_max_price_slot >= 1520) _col = c_aqua
+                        if (_max_price_slot >= 1900) _col = c_fuchsia
+                        _xx = ds_list_find_value(_list_xx, i)
+                        _yy = ds_list_find_value(_list_yy, i)
+                        _x = ds_list_find_value(_list_x, i)
+                        _y = ds_list_find_value(_list_y, i)
+                        draw_sprite_ext(s_16x16, 0, (_x - camx), (_y - camy), _xx, _yy, 0, _col, 0.5)
+                    }
+                }
+            }
+            draw_set_font(font0)
+            draw_text((0 - camx), (0 - camy), "Price per kg")
+            draw_text((50 - camx), (50 - camy), "Price per slot")
+            draw_text_ext((camx + global.show_overlay_price_kg_x), (camy + global.show_overlay_price_kg_y), "Price per kg", 8, global.show_overlay_price_kg_w)
+            draw_text_ext((camx + global.show_overlay_price_slot_x), (camy + global.show_overlay_price_slot_y), "Price per slot", 8, global.show_overlay_price_slot_w)
         }
     }
 }
@@ -201,20 +291,31 @@ if (go == 1)
         {
             if (obj_player.trading == 0)
             {
-                if (room == r_hub)
-                {
-                    var soldi_ = item_value[item_id]
-                    var soldi_2 = 0
-                    if (item_categoria[item_id] == (0 << 0))
-                        soldi_2 = scr_get_money_weapon(id_instance)
-                    var soldi_tot = (((((soldi_ * id_instance.durability) / 100) + soldi_2) * 0.2) * global.sk_k[(21 << 0)])
-                    soldi_tot = round(soldi_tot)
-                    _t_stack = ""
-                    if (_qnt > 1)
-                        _t_stack = (" / " + string((soldi_tot * id_instance.qnt)))
-                    _t = (("Sell for: " + string(soldi_tot)) + _t_stack)
-                    draw_text((left_x + 2), (top_y + 24), _t)
-                }
+
+           var soldi_ = item_value[item_id]
+                var soldi_2 = 0
+                if (item_categoria[item_id] == (0 << 0))
+                    soldi_2 = scr_get_money_weapon(id_instance)
+                var soldi_tot = (((((soldi_ * id_instance.durability) / 100) + soldi_2) * 0.2) * global.sk_k[(21 << 0)])
+                soldi_tot = round(soldi_tot)
+                _t_stack = ""
+                if (_qnt > 1)
+                    _t_stack = (" / " + string((soldi_tot * id_instance.qnt)))
+                _t = (("Sell for: " + string(soldi_tot)) + _t_stack)
+                draw_text((left_x + 2), (top_y + 24), _t)
+                var price_per_kg = (soldi_tot / item_weight[item_id])
+                _t = ("per kg: " + string(price_per_kg))
+                draw_text((left_x + 4), (top_y + 34), _t)
+                var _w = (sprite_get_width(item_sprite_inv[item_id]) div 16)
+                var _h = (sprite_get_height(item_sprite_inv[item_id]) div 16)
+                var slots = (_w * _h)
+                var price_per_slot = ((soldi_tot * id_instance.qnt) / slots)
+                var _t_max_per_slot = ""
+                if (item_stack_max[item_id] > 1)
+                    _t_max_per_slot = ((" (max: " + string(((soldi_tot * item_stack_max[item_id]) / slots))) + ")")
+                _t = (("per slot: " + string(price_per_slot)) + _t_max_per_slot)
+                draw_text((left_x + 4), (top_y + 44), _t)
+
             }
             else if (id_instance.position == (3 << 0))
             {
@@ -244,7 +345,7 @@ if (go == 1)
                 draw_text((left_x + 2), (top_y + 24), _t)
             }
         }
-        draw_text_ext((left_x + 2), (top_y + 36), item_description[item_id], 8, ((bb_w / 2) - 6))
+        draw_text_ext((left_x + 2), (top_y + 56), item_description[item_id], 8, ((bb_w / 2) - 6))
         var offset_amount = 12
         var stat_startx = (left_x + (bb_w / 2))
         var stat_starty = (top_y + 22)
